@@ -1,7 +1,7 @@
 name: Publish Packages
 on:
   workflow_run:
-    workflows: [Build]
+    workflows: [Build Packages]
     branches: [main]
     types: [completed]
 
