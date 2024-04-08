@@ -1,5 +1,11 @@
 # @spanion/react-hooks
 
+## 0.0.11
+
+### Patch Changes
+
+- d745f04: version bump
+
 ## 0.0.3
 
 ### Patch Changes
