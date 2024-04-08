@@ -1,10 +1,11 @@
 {
   "name": "@spanion/react-hooks",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "description": "Collection of reusable react hooks used regularly.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf dist",
@@ -42,5 +43,13 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "clean-package": {
+    "remove": [
+      "jest",
+      "script",
+      "exports",
+      "devDependencies"
+    ]
   }
 }
