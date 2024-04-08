@@ -1,5 +1,11 @@
 # @spanion/utils
 
+## 0.0.11
+
+### Patch Changes
+
+- b745884: Publish fixes for packages
+
 ## 0.0.3
 
 ### Patch Changes
