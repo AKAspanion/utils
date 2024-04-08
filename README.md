@@ -6,14 +6,13 @@ This repo includes the following packages and apps:
 
 ### Apps and Packages
 
-- `api`: an [Express](https://expressjs.com/) server
-- `app`: a [Next.js](https://nextjs.org/) app
-- `admin`: a [Vite](https://vitejs.dev/) single page app
+- `app`: a [Next.js](https://nextjs.org/) app for documentation website
 - `@repo/config-eslint`: ESLint configurations used throughout the monorepo
 - `@repo/config-typescript`: tsconfig.json's used throughout the monorepo
 - `@repo/jest-presets`: Jest configurations
-- `@repo/ui`: a dummy React UI library (which contains `<CounterButton>` and `<Link>` components)
-- `@repo/utils`: all utility functions goes here
+- `@repo/ui`: React UI library for the main app
+- `@spanion/utils`: all reusable utility functions, published to npm
+- `@spanion/react-hooks`: all reusable react hooks, published to npm
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 

@@ -1,4 +1,4 @@
-import { CounterButton, Link } from "@spanion/ui";
+import { CounterButton, Link } from "@repo/ui";
 import { log } from "@spanion/utils";
 import Launch from "./launch";
 
