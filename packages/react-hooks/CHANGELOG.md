@@ -1,5 +1,11 @@
 # @spanion/react-hooks
 
+## 0.0.3
+
+### Patch Changes
+
+- 2d74ab8: Pipeline added
+
 ## 0.0.2
 
 ### Patch Changes

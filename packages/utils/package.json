@@ -1,6 +1,6 @@
 {
   "name": "@spanion/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Collection of reusable utilities used regularly.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
