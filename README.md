@@ -1,4 +1,4 @@
-# Utils
+# Utils [![Build Packages](https://github.com/AKAspanion/utils/actions/workflows/build_packages.yml/badge.svg)](https://github.com/AKAspanion/utils/actions/workflows/build_packages.yml)
 
 This is a monorepo library that contains all the reusable utilities, hooks, helpers, etc,. that I have used in my various projects till now.
 
