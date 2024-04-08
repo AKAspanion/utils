@@ -1,5 +1,6 @@
-import { CounterButton, Link } from "@repo/ui";
-import { add, log } from "@repo/utils";
+import { CounterButton, Link } from "@spanion/ui";
+import { log } from "@spanion/utils";
+import Launch from "./launch";
 
 export const metadata = {
   title: "App | Kitchen Sink",
@@ -15,7 +16,7 @@ export default function App(): JSX.Element {
         <span>Kitchen Sink</span>
       </h1>
       <div>
-        <div>This calculation is using utils. 10+20 = {add(10, 20)}</div>
+        <Launch />
         <br />
         <CounterButton />
       </div>

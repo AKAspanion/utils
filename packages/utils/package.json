@@ -1,5 +1,5 @@
 {
-  "name": "@repo/utils",
+  "name": "@spanion/utils",
   "version": "0.0.7",
   "description": "Collection of reusable utilities used regularly.",
   "main": "dist/index.js",
