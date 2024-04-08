@@ -1,6 +1,6 @@
 {
   "name": "@spanion/utils",
-  "version": "0.0.7",
+  "version": "0.0.2",
   "description": "Collection of reusable utilities used regularly.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,19 +10,24 @@
     "format": "prettier --write .",
     "dev": "rimraf lib && tsup --watch",
     "build": "rimraf dist && env NODE_ENV=production tsup",
+    "lint": "eslint src/",
     "build:watch": "tsup --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "jest": {
+    "preset": "@repo/jest-presets/browser"
+  },
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.3"
-  },
-  "exports": {
-    ".": "./src/index.ts"
+    "typescript": "5.3.3"
   }
 }

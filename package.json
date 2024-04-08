@@ -5,7 +5,10 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build:packages": "turbo run build --filter=utils --filter=react-hooks",
+    "release:packages": "yarn build:packages && changeset publish",
     "lint": "turbo run lint",
+    "lint:packages": "turbo run lint --filter=utils --filter=react-hooks",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck"
   },

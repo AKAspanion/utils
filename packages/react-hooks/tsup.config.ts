@@ -12,6 +12,6 @@ export default defineConfig((options: Options) => ({
   banner: {
     js: '"use client"',
   },
-  entry: ["./src/**/*.tsx", "!src/**/__tests__/**", "!src/**/*.test.*"], //include all files under src
+  entry: ["./src/**/*.ts", "!src/**/__tests__/**", "!src/**/*.test.*"], //include all files under src
   ...options,
 }));
