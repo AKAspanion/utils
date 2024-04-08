@@ -1,21 +1,24 @@
 {
   "name": "@spanion/utils",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "description": "Collection of reusable utilities used regularly.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "tsc": "tsc",
     "format": "prettier --write .",
     "dev": "rimraf lib && tsup --watch",
     "build": "rimraf dist && env NODE_ENV=production tsup",
     "lint": "eslint src/",
-    "build:watch": "tsup --watch"
+    "build:watch": "tsup --watch",
+    "test": "jest",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
-  "files": [
-    "dist/**"
-  ],
   "exports": {
     ".": "./src/index.ts"
   },
@@ -29,5 +32,13 @@
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
     "typescript": "5.3.3"
+  },
+  "clean-package": {
+    "remove": [
+      "jest",
+      "scripts",
+      "exports",
+      "devDependencies"
+    ]
   }
 }

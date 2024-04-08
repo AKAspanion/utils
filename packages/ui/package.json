@@ -10,9 +10,6 @@
   "files": [
     "dist/**"
   ],
-  "exports": {
-    ".": "./src/index.tsx"
-  },
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf dist",
@@ -20,6 +17,9 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
     "test": "jest"
+  },
+  "exports": {
+    ".": "./src/index.tsx"
   },
   "jest": {
     "preset": "@repo/jest-presets/browser"
@@ -37,5 +37,13 @@
     "react-dom": "^18.2.0",
     "tsup": "^8.0.2",
     "typescript": "5.3.3"
+  },
+  "clean-package": {
+    "remove": [
+      "jest",
+      "scripts",
+      "exports",
+      "devDependencies"
+    ]
   }
 }

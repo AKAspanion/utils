@@ -13,6 +13,8 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "clean-package": "^2.2.0",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
@@ -24,7 +26,5 @@
     "apps/*",
     "packages/*"
   ],
-  "dependencies": {
-    "@changesets/cli": "^2.27.1"
-  }
+  "dependencies": {}
 }

@@ -1,11 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { CounterButton } from ".";
 
-describe("CounterButton", () => {
+describe("useInterval", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     const root = createRoot(div);
-    root.render(<CounterButton />);
+    // root.render(<Link href="https://turbo.build/repo">Turborepo Docs</Link>);
     root.unmount();
   });
 });

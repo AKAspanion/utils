@@ -1,4 +1,4 @@
-import { add, sub } from "../math";
+import { add, sub } from "../src/math";
 
 describe("Utility | Main", () => {
   it("add - should add the given two numbers", () => {
