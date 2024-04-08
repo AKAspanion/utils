@@ -1,6 +1,14 @@
-# monorepo-template
+# Utils
 
-My opinionated starter template for web apps, built using Turborepo.
+This is a monorepo library that contains all the reusable utilities, hooks, helpers, etc,. that I have used in my various projects till now.
+
+Packages in this monorepo that are published to npm.  
+- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Futils?style=flat-square&label=%40spanion%2Futils&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Futils)  
+- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Freact-hooks?style=flat-square&label=%40spanion%2Freact-hooks&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Freact-hooks)
+
+
+
+
 
 This repo includes the following packages and apps:
 
