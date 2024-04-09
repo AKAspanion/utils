@@ -15,6 +15,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
     "test": "jest",
+    "docs": "typedoc",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },

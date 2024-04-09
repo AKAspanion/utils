@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks -- for test*/
-/* eslint-disable @typescript-eslint/explicit-function-return-type -- for test */
 import type { RefObject } from "react";
 import { act, renderHook } from "@testing-library/react";
 import { useEventListener } from "../src";
@@ -22,7 +21,7 @@ describe("useEventListener", () => {
   it("does not add the event listener if no target element is provided", () => {
     const mockHandler = jest.fn();
 
-    function TestComponent() {
+    function TestComponent(): null {
       act(() => {
         useEventListener("click", mockHandler);
       });
@@ -39,7 +38,7 @@ describe("useEventListener", () => {
     const mockHandler = jest.fn();
     const element = {} as RefObject<HTMLDivElement>;
 
-    function TestComponent() {
+    function TestComponent(): null {
       act(() => {
         useEventListener("click", mockHandler, {}, element);
       });
@@ -55,7 +54,7 @@ describe("useEventListener", () => {
     const mockHandler = jest.fn();
     const element = { current: {} } as RefObject<HTMLDivElement>;
 
-    function TestComponent() {
+    function TestComponent(): null {
       act(() => {
         useEventListener("click", mockHandler, {}, element);
       });

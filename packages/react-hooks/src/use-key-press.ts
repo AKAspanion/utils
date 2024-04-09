@@ -1,7 +1,7 @@
 import type { KeyboardEvent } from "react";
 import { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 
-type KeyboardMetaKeys = "ALT" | "SHIFT" | "CTRL";
+export type KeyboardMetaKeys = "ALT" | "SHIFT" | "CTRL";
 
 /**
  * Listen to keyboard events
