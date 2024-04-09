@@ -1,3 +1,5 @@
+import { AnySpreadParams } from "../types/common";
+
 /* eslint-disable @typescript-eslint/ban-types -- override */
 export function on<T extends Window | Document | HTMLElement | EventTarget>(
   obj: T | null,
