@@ -1,2 +1,3 @@
-export { log } from "./log";
-export { add, sub } from "./math";
+export * from "./log";
+export * from "./math";
+export * from "./random";
