@@ -27,6 +27,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/jest-presets": "*",
@@ -51,6 +52,7 @@
       "jest",
       "scripts",
       "exports",
+      "dependencies",
       "devDependencies"
     ]
   }
