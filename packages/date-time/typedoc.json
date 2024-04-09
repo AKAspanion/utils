@@ -1,0 +1,8 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "@spanion/date-time",
+  "entryPoints": ["src/index.ts"],
+  "categoryOrder": ["Category Name", "Other Category", "*"],
+  "groupOrder": ["Functions", "Variables", "*", ""],
+  "out": "docs"
+}
