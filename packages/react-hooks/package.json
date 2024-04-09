@@ -1,6 +1,6 @@
 {
   "name": "@spanion/react-hooks",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Collection of reusable react hooks used regularly.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

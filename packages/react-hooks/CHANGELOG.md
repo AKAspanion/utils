@@ -1,5 +1,11 @@
 # @spanion/react-hooks
 
+## 0.0.12
+
+### Patch Changes
+
+- 3c01323: Minor patch for newly added hooks
+
 ## 0.0.11
 
 ### Patch Changes
