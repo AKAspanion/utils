@@ -7,3 +7,4 @@ export { default as useInterval } from "./use-interval";
 export { default as useKeyPress } from "./use-key-press";
 export { default as useLocalPagination } from "./use-local-pagination";
 export { default as useLocalSearch } from "./use-local-search";
+export { default as usePosition } from "./use-position";
