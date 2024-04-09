@@ -1,12 +1,12 @@
 import { useCallback, useState } from "react";
 import useEventListener from "./use-event-listener";
 
-type PositionType = {
+export type PositionType = {
   left?: string;
   right?: string;
 };
 
-type PositionOptions = {
+export type PositionOptions = {
   offsetY?: number;
   offsetX?: number;
   right?: boolean;
@@ -14,19 +14,27 @@ type PositionOptions = {
 
 /**
  * Determines the position of a given element relative to a parent
- * @param parent -- React.RefObject
- * @param options -- Object
- * @returns -- dimensions and positionElement function
+ * @param parent - parent element
+ * @param options - Position options
+ * @returns - dimensions object, and positionElement function
+ * @example
+ * ```ts
+ * const { dimensions } = usePosition(document.documentElement);
+ * ```
  */
 const usePosition = <T extends HTMLElement = HTMLDivElement>(
   parent: React.RefObject<T>,
-  options: PositionOptions = {}
+  options?: PositionOptions
 ): { dimensions: React.CSSProperties; positionElement: () => void } => {
   const [dimensions, setDimensions] = useState<React.CSSProperties>({});
 
   const positionElement = useCallback(() => {
     if (parent.current) {
-      const { offsetY = 4, offsetX = 0, right: rightFlag = false } = options;
+      const {
+        offsetY = 4,
+        offsetX = 0,
+        right: rightFlag = false,
+      } = options || {};
       const { width, top, left, right, height } =
         parent.current.getBoundingClientRect();
 

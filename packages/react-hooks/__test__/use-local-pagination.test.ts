@@ -12,11 +12,11 @@ describe("useLocalPagination", () => {
       result.current.loadMore();
       result.current.loadMore();
     });
-    expect(result.current.computedArray.length).toBe(array.length);
+    expect(result.current.computedRecords.length).toBe(array.length);
     act(() => {
       result.current.resetOffset();
     });
-    expect(result.current.computedArray.length).toBe(5);
+    expect(result.current.computedRecords.length).toBe(5);
   });
   it("return local pagination for 0 records", () => {
     const array: number[] = [];
@@ -24,6 +24,6 @@ describe("useLocalPagination", () => {
       return useLocalPagination(array);
     });
     expect(result.current.showLoadMore).toBe(false);
-    expect(result.current.computedArray.length).toBe(0);
+    expect(result.current.computedRecords.length).toBe(0);
   });
 });

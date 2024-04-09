@@ -1,11 +1,23 @@
 import { useCallback, useMemo, useState } from "react";
 
+/**
+ * Paginate a list of records locally
+ * @param records - list of records
+ * @param count - pagination count
+ * @param defaultOffset - default offset for pagination
+ * @returns paginated records, load more flag, load more function, reset offset function
+ * @example
+ * ```ts
+ * const records = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+ * const { computedRecords, showLoadMore } = useLocalPagination(records, 6);
+ * ```
+ */
 const useLocalPagination = <T>(
   records: T[],
   count = 5,
   defaultOffset?: number
 ): {
-  computedArray: T[];
+  computedRecords: T[];
   showLoadMore: boolean;
   loadMore: () => void;
   resetOffset: () => void;
@@ -20,7 +32,7 @@ const useLocalPagination = <T>(
     [offset, totalRecords]
   );
 
-  const computedArray = useMemo(
+  const computedRecords = useMemo(
     () => records.slice(0, offset),
     [offset, records]
   );
@@ -33,7 +45,7 @@ const useLocalPagination = <T>(
     setOffset(count);
   }, [count]);
 
-  return { showLoadMore, loadMore, computedArray, resetOffset };
+  return { showLoadMore, loadMore, computedRecords, resetOffset };
 };
 
 export default useLocalPagination;

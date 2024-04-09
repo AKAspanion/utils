@@ -1,6 +1,19 @@
 import type { RefObject } from "react";
 import { useEffect, useRef } from "react";
 
+/**
+ * Binds an event listener to the document or specified element
+ * @param eventName - event name/key
+ * @param handler - callback function to handle the event
+ * @param options - event handler options
+ * @param element - element to which the handler is applied
+ * @example
+ * ```ts
+ * useEventListener("click", () => {
+ *  console.log("clicked");
+ * });
+ * ```
+ */
 const useEventListener = <T extends HTMLElement = HTMLDivElement>(
   eventName: keyof WindowEventMap,
   handler: (event: Event) => void,
