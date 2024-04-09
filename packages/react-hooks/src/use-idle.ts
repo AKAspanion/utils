@@ -11,6 +11,18 @@ const events = [
 ];
 const oneMinute = 60e3;
 
+/**
+ * Returns a flag when idle for the specified time duration
+ * @param ms - time in milliseconds
+ * @param initialState - initial state for idle 
+ * @returns the idle state, true/false
+ * @example
+ * ```ts
+ * const state = useIdle();
+ * // Prints false, true after 1 minute
+ * console.log(state);
+ * ```
+ */
 const useIdle = (ms: number = oneMinute, initialState = false): boolean => {
   const [state, setState] = useState<boolean>(initialState);
 

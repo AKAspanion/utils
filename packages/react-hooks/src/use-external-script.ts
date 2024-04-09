@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Loads an external/remote script
+ * @param url - source url of the script to load
+ * @returns state of the stript
+ * @example
+ * ```ts
+ * useExternalScript("https://code.jquery.com/jquery-3.3.1.slim.min.js");
+ * ```
+ */
 const useExternalScript = (url?: string): string => {
   const [state, setState] = useState(url ? "loading" : "idle");
 

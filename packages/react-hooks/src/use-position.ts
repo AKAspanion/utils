@@ -15,8 +15,12 @@ type PositionOptions = {
 /**
  * Determines the position of a given element relative to a parent
  * @param parent -- React.RefObject
- * @param options -- Object
- * @returns -- dimensions and positionElement function
+ * @param options -- Position options
+ * @returns -- dimensions object, and positionElement function
+ * @example
+ * ```ts
+ * const { dimensions } = usePosition(document.documentElement);
+ * ```
  */
 const usePosition = <T extends HTMLElement = HTMLDivElement>(
   parent: React.RefObject<T>,
