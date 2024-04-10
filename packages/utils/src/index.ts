@@ -1,3 +1,4 @@
+export * from "./capitalize";
 export * from "./clamp";
 export * from "./in-range";
 export * from "./log";
