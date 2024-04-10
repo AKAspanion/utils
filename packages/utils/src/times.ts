@@ -3,7 +3,7 @@
  * @param length - length of array
  * @returns processed array of integers
  */
-export const timesNumber = (length: number) =>
+export const timesNumber = (length: number): number[] =>
   Array.from({ length }, (_, x) => x);
 
 /**
@@ -15,4 +15,4 @@ export const timesNumber = (length: number) =>
 export const times = <T>(
   length: number,
   callback: (_: unknown, x: number) => T
-) => Array.from({ length }, callback);
+): T[] => Array.from({ length }, callback);

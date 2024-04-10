@@ -16,7 +16,7 @@ export const clamp = (
   number: number,
   lowerBound: number,
   upperBound: number
-) => {
+): number => {
   if (!upperBound) {
     return Math.max(number, lowerBound) === lowerBound ? number : lowerBound;
   } else if (Math.min(number, lowerBound) === number) {

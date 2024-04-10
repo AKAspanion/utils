@@ -12,5 +12,5 @@
  * // output: true
  * ```
  */
-export const inRange = (num: number, start: number, end = 0) =>
+export const inRange = (num: number, start: number, end = 0): boolean =>
   Math.min(start, end) <= num && num < Math.max(start, end);
