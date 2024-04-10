@@ -16,7 +16,7 @@ describe("dateBeforeDays", () => {
   it("should be able to get getDateBeforeDays with selected date-format with prevDate upto 90 days", () => {
     const todaysDate = new Date();
     const dateSeparator = "/";
-    const data = dateBeforeDays(90, "/", "ymd");
+    const data = dateBeforeDays(90);
 
     expect(data.to).toBe(
       `${todaysDate.getFullYear()}${dateSeparator}${(todaysDate.getMonth() + 1)
