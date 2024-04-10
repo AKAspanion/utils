@@ -1,4 +1,4 @@
-export type DateTypes = string | Date | number;
+import type { DateTypes } from "./types/common";
 
 export const getHours = (date: DateTypes): number => {
   return (date ? new Date(date) : new Date()).getHours();
