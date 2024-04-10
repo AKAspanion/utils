@@ -3,6 +3,7 @@ node_modules
 .turbo
 *.log
 .next
+coverage
 docs
 dist
 dist-ssr
