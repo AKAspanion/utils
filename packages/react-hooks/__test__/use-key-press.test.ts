@@ -19,7 +19,7 @@ describe("useKeyPress", () => {
     expect(callback).toHaveBeenCalledTimes(1);
 
     act(() => {
-      fireEvent.keyDown(document, { key: "b", ctrlKey: true });
+      fireEvent.keyDown(document, { key: "b", metaKey: true });
     });
 
     expect(callback).toHaveBeenCalledTimes(2);
@@ -28,7 +28,7 @@ describe("useKeyPress", () => {
   it("should not call the callback when other keys are pressed", () => {
     const callback = jest.fn();
     const keys = ["a", "b"];
-    const metaKeys: KeyboardMetaKeys[] = ["CTRL"];
+    const metaKeys: KeyboardMetaKeys[] = ["SHIFT"];
 
     renderHook(() => {
       useKeyPress(callback, keys, metaKeys);
@@ -65,7 +65,7 @@ describe("useKeyPress", () => {
   it("should not call the callback when the metaKeys are not satisfied", () => {
     const callback = jest.fn();
     const keys = ["a", "b"];
-    const metaKeys: KeyboardMetaKeys[] = ["CTRL"];
+    const metaKeys: KeyboardMetaKeys[] = ["ALT"];
 
     renderHook(() => {
       useKeyPress(callback, keys, metaKeys);

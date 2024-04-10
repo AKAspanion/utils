@@ -6,6 +6,7 @@ describe("useExternalScript", () => {
     const { result } = renderHook(() =>
       useExternalScript("https://code.jquery.com/jquery-3.3.1.slim.min.js")
     );
+
     expect(result.current).toBe("loading");
   });
   it("return state of an invalid external script", () => {

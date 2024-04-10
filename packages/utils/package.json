@@ -13,9 +13,11 @@
     "format": "prettier --write .",
     "dev": "rimraf lib && tsup --watch",
     "build": "rimraf dist && env NODE_ENV=production tsup",
+    "clean": "rm -rf dist && rm -rf test-report && rm -rf docs",
     "lint": "eslint src/",
     "build:watch": "tsup --watch",
     "test": "jest",
+    "report": "jest --coverage",
     "docs": "typedoc",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
@@ -24,7 +26,23 @@
     ".": "./src/index.ts"
   },
   "jest": {
-    "preset": "@repo/jest-presets/browser"
+    "preset": "@repo/jest-presets/browser",
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "urlForTestFiles": "https://github.com/AKAspanion/utils/blob/main/packages/utils",
+          "pageTitle": "@spanion/utils",
+          "publicPath": "./test-report",
+          "filename": "index.html",
+          "openReport": false,
+          "darkTheme": true,
+          "hideIcon": true,
+          "expand": false
+        }
+      ]
+    ]
   },
   "license": "MIT",
   "dependencies": {},

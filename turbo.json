@@ -24,6 +24,9 @@
     },
     "clean": {
       "cache": false
+    },
+    "report": {
+      "cache": false
     }
   }
 }

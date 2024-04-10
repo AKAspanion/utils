@@ -10,11 +10,12 @@
   ],
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf test-report && rm -rf docs",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
     "test": "jest",
+    "report": "jest --coverage",
     "docs": "typedoc",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
@@ -23,7 +24,23 @@
     ".": "./src/index.ts"
   },
   "jest": {
-    "preset": "@repo/jest-presets/browser"
+    "preset": "@repo/jest-presets/browser",
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "urlForTestFiles": "https://github.com/AKAspanion/utils/blob/main/packages/react-hooks",
+          "pageTitle": "@spanion/react-hooks",
+          "publicPath": "./test-report",
+          "filename": "index.html",
+          "openReport": false,
+          "darkTheme": true,
+          "hideIcon": true,
+          "expand": false
+        }
+      ]
+    ]
   },
   "keywords": [],
   "author": "",

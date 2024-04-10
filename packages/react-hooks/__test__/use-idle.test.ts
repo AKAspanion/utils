@@ -9,7 +9,7 @@ describe("useIdle", () => {
   });
 
   it("should set the state to true after the specified idle time", () => {
-    const { result } = renderHook(() => useIdle(60 * 1000));
+    const { result } = renderHook(() => useIdle());
     act(() => {
       jest.advanceTimersByTime(60 * 1000);
     });

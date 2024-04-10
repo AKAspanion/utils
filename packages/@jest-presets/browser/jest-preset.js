@@ -13,4 +13,21 @@ module.exports = {
     "<rootDir>/dist",
   ],
   preset: "ts-jest",
+  coverageDirectory: "test-report",
+  reporters: [
+    "default",
+    [
+      "jest-html-reporters",
+      {
+        urlForTestFiles: "https://github.com/AKAspanion/utils/blob/main",
+        pageTitle: "Utils Unit Tests",
+        publicPath: "./test-report",
+        filename: "index.html",
+        openReport: false,
+        darkTheme: true,
+        hideIcon: true,
+        expand: false,
+      },
+    ],
+  ],
 };

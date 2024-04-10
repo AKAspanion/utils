@@ -4,8 +4,10 @@ describe("capitalize", () => {
   it("capitalize - upper", () => {
     expect(capitalize("JOHN")).toEqual("John");
   });
-
   it("capitalize - lower", () => {
     expect(capitalize("doe")).toEqual("Doe");
+  });
+  it("capitalize - empty", () => {
+    expect(capitalize("")).toEqual("");
   });
 });
