@@ -1,5 +1,11 @@
 # @spanion/utils
 
+## 0.0.12
+
+### Patch Changes
+
+- 827566b: Added new date utilities
+
 ## 0.0.11
 
 ### Patch Changes
