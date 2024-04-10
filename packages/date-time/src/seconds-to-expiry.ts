@@ -1,10 +1,10 @@
 /**
- *
+ * Get seconds to expiry time
  * @param expiry - seconds to expiry
  * @param shouldRound - should round the return value
- * @returns total seconds from expiry
+ * @returns total seconds to expiry
  */
-export const secondsFromExpiry = (
+export const secondsToExpiry = (
   expiry: number,
   shouldRound: boolean
 ): number => {

@@ -1,5 +1,5 @@
 /**
- *
+ * Get seconds from previous time
  * @param prevTime - previous time
  * @param shouldRound - should round the return value
  * @returns total seconds from previous time
