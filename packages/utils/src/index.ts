@@ -1,5 +1,6 @@
 export * from "./capitalize";
 export * from "./clamp";
+export * from "./debounce";
 export * from "./in-range";
 export * from "./is-string";
 export * from "./log";
