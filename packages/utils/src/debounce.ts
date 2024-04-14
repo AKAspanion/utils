@@ -1,5 +1,4 @@
 export function debounce<T extends (...args: Parameters<T>) => void>(
-  this: ThisParameterType<T>,
   callback: T,
   delay = 300
 ): (...args: Parameters<T>) => void {
