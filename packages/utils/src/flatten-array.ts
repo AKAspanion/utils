@@ -1,7 +1,8 @@
 /**
  * Recursively flattens array to single level.
  * @param arr - deep nested array
- * @returns
+ * @param level - flatten till level
+ * @returns flattened array till the given level
  */
 export const flattenArray = <T>(
   arr: NestedArray<T>,

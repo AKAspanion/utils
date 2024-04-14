@@ -1,3 +1,9 @@
+/**
+ * Convert a function call to debounced function call
+ * @param callback - function to call
+ * @param delay - delay in debounce
+ * @returns debounced function
+ */
 export function debounce<T extends (...args: Parameters<T>) => void>(
   callback: T,
   delay = 300
