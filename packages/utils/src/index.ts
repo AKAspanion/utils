@@ -7,6 +7,7 @@ export * from "./is-string";
 export * from "./log";
 export * from "./math";
 export * from "./normalize";
+export * from "./pipe";
 export * from "./random";
 export * from "./throttle";
 export * from "./times";
