@@ -1,6 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call -- required*/
+/* eslint-disable @typescript-eslint/no-unsafe-member-access -- required*/
+/* eslint-disable @typescript-eslint/no-unsafe-assignment -- required */
+/* eslint-disable @typescript-eslint/no-unsafe-return -- required*/
 import type { Anything } from "./types/common";
 
-export const promiseAllReduce = (promises: Promise<Anything>[]) => {
+export const promiseAllReduce = (
+  promises: Promise<Anything>[]
+): Promise<Anything> => {
   return promises.reduce((accumulator, value) => {
     return accumulator.then((results: Anything) => {
       return Promise.resolve(value).then((result) => {
@@ -10,9 +16,11 @@ export const promiseAllReduce = (promises: Promise<Anything>[]) => {
   }, Promise.resolve([]));
 };
 
-export const promiseAllIterative = (promises: Promise<Anything>[]) => {
+export const promiseAllIterative = (
+  promises: Promise<Anything>[]
+): Promise<Anything> => {
   return new Promise((resolve, reject) => {
-    let results = [];
+    const results: Anything[] = [];
     let completed = 0;
 
     promises.forEach((value, index) => {
@@ -25,7 +33,10 @@ export const promiseAllIterative = (promises: Promise<Anything>[]) => {
             resolve(results);
           }
         })
-        .catch((err) => reject(err));
+        .catch((err) => {
+          // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors -- required
+          reject(err);
+        });
     });
   });
 };
@@ -39,11 +50,11 @@ export const promiseAllRecursive = (
 
   const [first, ...rest] = promises;
 
-  // Calling Promise.resolve on the first value because it could
-  // be either a Promise or an actual value.
-  return Promise.resolve(first).then((firstResult: Anything) => {
-    return promiseAllRecursive(rest).then((restResults: Anything[]) => {
-      return [firstResult, ...restResults];
-    });
-  });
+  return Promise.resolve(first).then(
+    (firstResult: Anything): Promise<Anything> => {
+      return promiseAllRecursive(rest).then((restResults: Anything[]) => {
+        return [firstResult, ...restResults];
+      });
+    }
+  );
 };
