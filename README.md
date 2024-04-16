@@ -1,6 +1,7 @@
 # Utils [![Build Packages](https://github.com/AKAspanion/utils/actions/workflows/build_packages.yml/badge.svg)](https://github.com/AKAspanion/utils/actions/workflows/build_packages.yml)
 
-This is a monorepo library that contains all the reusable utilities, hooks, helpers, etc,. that I have used in my various projects till now.
+This is a monorepo library that contains all the reusable utilities, hooks, helpers, etc,. that I have used in my various projects till now.  
+All these libraries have 0 dependecies, are 100% typescript and are 100% native.
 
 Packages in this monorepo that are published to npm.
 
@@ -16,8 +17,9 @@ This repo includes the following packages and apps:
 - `@repo/config-eslint`: ESLint configurations used throughout the monorepo
 - `@repo/config-typescript`: tsconfig.json's used throughout the monorepo
 - `@repo/jest-presets`: Jest configurations
-- `@repo/ui`: React UI library for the main app
-- `@spanion/utils`: all reusable utility functions, published to npm
-- `@spanion/react-hooks`: all reusable react hooks, published to npm
+- `@repo/ui`: React UI library for the documentation app
+- `@spanion/date-time`: reusable date-time functions, published to npm
+- `@spanion/utils`: reusable utility functions, published to npm
+- `@spanion/react-hooks`: reusable react hooks, published to npm
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).

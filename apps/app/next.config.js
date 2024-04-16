@@ -1,5 +1,15 @@
 module.exports = {
   reactStrictMode: true,
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.shields.io",
+        port: "",
+      },
+    ],
+  },
   rewrites: async () => [
     {
       source: "/utils/docs",

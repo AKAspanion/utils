@@ -1,3 +1,3 @@
 # @spanion/date-time
 
-Collection of reusable utilities used regularly.
+Collection of reusable date time utilities used regularly.

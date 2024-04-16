@@ -1,5 +1,6 @@
 import { Link } from "@repo/ui";
 import { log } from "@spanion/utils";
+import Image from "next/image";
 
 export const metadata = {
   title: "Utils | AKAspanion",
@@ -23,13 +24,28 @@ export default function App(): JSX.Element {
         <br />
         <div className="links">
           <Link className="link" href="utils/docs/index.html" newTab>
-            @spanion/utils
+            <Image
+              alt="@spanion/utils"
+              height={24}
+              src="https://img.shields.io/npm/v/%40spanion%2Futils?label=%40spanion%2Futils&style=flat-square"
+              width={160}
+            />
           </Link>
           <Link className="link" href="date-time/docs/index.html" newTab>
-            @spanion/date-time
+            <Image
+              alt="@spanion/utils"
+              height={24}
+              src="https://img.shields.io/npm/v/%40spanion%2Fdate-time?style=flat-square&label=%40spanion%2Fdate-time"
+              width={180}
+            />
           </Link>
           <Link className="link" href="react-hooks/docs/index.html" newTab>
-            @spanion/react-hooks
+            <Image
+              alt="@spanion/utils"
+              height={24}
+              src="https://img.shields.io/npm/v/%40spanion%2Freact-hooks?style=flat-square&label=%40spanion%2Freact-hooks"
+              width={200}
+            />
           </Link>
         </div>
       </p>
