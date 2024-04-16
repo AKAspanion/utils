@@ -1,5 +1,5 @@
+import { FlaskConical } from "lucide-react";
 import { Link } from "@repo/ui";
-import { log } from "@spanion/utils";
 import Image from "next/image";
 
 export const metadata = {
@@ -7,8 +7,6 @@ export const metadata = {
 };
 
 export default function App(): JSX.Element {
-  log("Hey! This is the App page.");
-
   return (
     <div className="container">
       <h1 className="title">
@@ -23,30 +21,57 @@ export default function App(): JSX.Element {
         <br />
         <br />
         <div className="links">
-          <Link className="link" href="utils/docs/index.html" newTab>
-            <Image
-              alt="@spanion/utils"
-              height={24}
-              src="https://img.shields.io/npm/v/%40spanion%2Futils?label=%40spanion%2Futils&style=flat-square"
-              width={160}
-            />
-          </Link>
-          <Link className="link" href="date-time/docs/index.html" newTab>
-            <Image
-              alt="@spanion/utils"
-              height={24}
-              src="https://img.shields.io/npm/v/%40spanion%2Fdate-time?style=flat-square&label=%40spanion%2Fdate-time"
-              width={180}
-            />
-          </Link>
-          <Link className="link" href="react-hooks/docs/index.html" newTab>
-            <Image
-              alt="@spanion/utils"
-              height={24}
-              src="https://img.shields.io/npm/v/%40spanion%2Freact-hooks?style=flat-square&label=%40spanion%2Freact-hooks"
-              width={200}
-            />
-          </Link>
+          <div className="link-wrapper">
+            <Link className="link" href="utils/docs/index.html" newTab>
+              <Image
+                alt="@spanion/utils"
+                height={24}
+                src="https://img.shields.io/npm/v/%40spanion%2Futils?label=%40spanion%2Futils&style=flat-square"
+                width={160}
+              />
+            </Link>
+            <Link
+              className="link link-icon"
+              href="utils/report/index.html"
+              newTab
+            >
+              <FlaskConical size={16} />
+            </Link>
+          </div>
+          <div className="link-wrapper">
+            <Link className="link" href="date-time/docs/index.html" newTab>
+              <Image
+                alt="@spanion/utils"
+                height={24}
+                src="https://img.shields.io/npm/v/%40spanion%2Fdate-time?style=flat-square&label=%40spanion%2Fdate-time"
+                width={180}
+              />
+            </Link>
+            <Link
+              className="link link-icon"
+              href="date-time/report/index.html"
+              newTab
+            >
+              <FlaskConical size={16} />
+            </Link>
+          </div>
+          <div className="link-wrapper">
+            <Link className="link" href="react-hooks/docs/index.html" newTab>
+              <Image
+                alt="@spanion/utils"
+                height={24}
+                src="https://img.shields.io/npm/v/%40spanion%2Freact-hooks?style=flat-square&label=%40spanion%2Freact-hooks"
+                width={200}
+              />
+            </Link>
+            <Link
+              className="link link-icon"
+              href="react-hooks/report/index.html"
+              newTab
+            >
+              <FlaskConical size={16} />
+            </Link>
+          </div>
         </div>
       </p>
     </div>

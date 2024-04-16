@@ -73,7 +73,24 @@ html {
   flex-direction: column;
 }
 
+.link-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .link {
   display: block;
   width: fit-content;
+}
+
+.link-icon {
+  color: white !important;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555555;
 }
