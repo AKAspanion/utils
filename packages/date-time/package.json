@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "dev": "rimraf lib && tsup --watch",
     "build": "rimraf dist && env NODE_ENV=production tsup",
-    "clean": "rm -rf dist && rm -rf test-report && rm -rf docs",
+    "clean": "rm -rf dist && rm -rf report && rm -rf docs",
     "lint": "eslint src/",
     "build:watch": "tsup --watch",
     "test": "jest",
@@ -21,7 +21,8 @@
     "docs": "typedoc",
     "prepack": "clean-package",
     "postpack": "clean-package restore",
-    "postdocs": "cp -r docs ../../apps/app/public/date-time"
+    "postdocs": "cp -r docs ../../apps/app/public/date-time",
+    "postreport": "cp -r report ../../apps/app/public/date-time"
   },
   "exports": {
     ".": "./src/index.ts"
@@ -35,7 +36,7 @@
         {
           "urlForTestFiles": "https://github.com/AKAspanion/utils/blob/main/packages/date-time",
           "pageTitle": "@spanion/date-time",
-          "publicPath": "./test-report",
+          "publicPath": "./report",
           "filename": "index.html",
           "openReport": false,
           "darkTheme": true,

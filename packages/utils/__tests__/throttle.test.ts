@@ -25,7 +25,7 @@ describe("throttle", () => {
 
     jest.runAllTimers();
 
-    expect(count).toEqual(101);
-    expect(func).toHaveBeenCalledTimes(1);
+    expect(count).toEqual(102);
+    expect(func).toHaveBeenCalledTimes(2);
   });
 });

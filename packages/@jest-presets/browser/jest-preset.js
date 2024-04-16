@@ -13,7 +13,7 @@ module.exports = {
     "<rootDir>/dist",
   ],
   preset: "ts-jest",
-  coverageDirectory: "test-report",
+  coverageDirectory: "report",
   reporters: [
     "default",
     [
@@ -21,7 +21,7 @@ module.exports = {
       {
         urlForTestFiles: "https://github.com/AKAspanion/utils/blob/main",
         pageTitle: "Utils Unit Tests",
-        publicPath: "./test-report",
+        publicPath: "./report",
         filename: "index.html",
         openReport: false,
         darkTheme: true,

@@ -10,14 +10,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "build:packages": "turbo run build --filter=utils --filter=react-hooks",
     "release:packages": "yarn build:packages && changeset publish",
-    "build:docs": "sh ./scripts/make-doc-folders.sh && yarn docs",
+    "build:docs": "sh ./scripts/make-public-folders.sh && yarn docs",
+    "build:report": "sh ./scripts/make-public-folders.sh && yarn report",
     "lint": "turbo run lint",
     "lint:packages": "turbo run lint --filter=utils --filter=react-hooks",
     "test": "turbo run test",
     "report": "turbo run report",
     "typecheck": "turbo run typecheck",
-    "prestart": "yarn build:docs",
-    "prebuild": "yarn build:docs"
+    "prestart": "yarn build:report && yarn build:docs",
+    "prebuild": "yarn build:report && yarn build:docs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

@@ -5,6 +5,7 @@ node_modules
 .next
 coverage
 test-report
+report
 docs
 dist
 dist-ssr

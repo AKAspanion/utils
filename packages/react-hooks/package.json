@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf dist && rm -rf test-report && rm -rf docs",
+    "clean": "rm -rf dist && rm -rf report && rm -rf docs",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
@@ -19,7 +19,8 @@
     "docs": "typedoc",
     "prepack": "clean-package",
     "postpack": "clean-package restore",
-    "postdocs": "cp -r docs ../../apps/app/public/react-hooks"
+    "postdocs": "cp -r docs ../../apps/app/public/react-hooks",
+    "postreport": "cp -r report ../../apps/app/public/react-hooks"
   },
   "exports": {
     ".": "./src/index.ts"
@@ -33,7 +34,7 @@
         {
           "urlForTestFiles": "https://github.com/AKAspanion/utils/blob/main/packages/react-hooks",
           "pageTitle": "@spanion/react-hooks",
-          "publicPath": "./test-report",
+          "publicPath": "./report",
           "filename": "index.html",
           "openReport": false,
           "darkTheme": true,
