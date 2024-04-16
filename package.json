@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev:app": "cd apps/app && yarn dev",
+    "start": "cd apps/app && yarn dev",
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",

@@ -1,6 +1,5 @@
-import { CounterButton, Link } from "@repo/ui";
+import { Link } from "@repo/ui";
 import { log } from "@spanion/utils";
-import Launch from "./launch";
 
 export const metadata = {
   title: "Utils | AKAspanion",
@@ -12,23 +11,27 @@ export default function App(): JSX.Element {
   return (
     <div className="container">
       <h1 className="title">
-        App <br />
-        <span>Kitchen Sink</span>
+        <span>Utils</span>
       </h1>
-      <div>
-        <Launch />
-        <br />
-        <CounterButton />
-      </div>
       <p className="description">
-        Built With{" "}
-        <Link href="https://turbo.build/repo" newTab>
-          Turborepo
-        </Link>
-        {" & "}
-        <Link href="https://nextjs.org/" newTab>
-          Next.js
-        </Link>
+        The following packages contain all the reusable utilities, hooks,
+        helpers, etc., that I have used in my various projects till now.
+        <br />
+        All these libraries have 0 dependecies, are 100% typescript and are 100%
+        native.
+        <br />
+        <br />
+        <div className="links">
+          <Link className="link" href="utils/docs/index.html" newTab>
+            @spanion/utils
+          </Link>
+          <Link className="link" href="date-time/docs/index.html" newTab>
+            @spanion/date-time
+          </Link>
+          <Link className="link" href="react-hooks/docs/index.html" newTab>
+            @spanion/react-hooks
+          </Link>
+        </div>
       </p>
     </div>
   );
