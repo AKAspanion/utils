@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "env NODE_ENV=production next build",
     "clean": "rm -rf .next",
     "dev": "next dev -p 3000",
     "lint": "next lint",

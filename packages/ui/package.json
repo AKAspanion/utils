@@ -11,7 +11,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "rm -rf dist && env NODE_ENV=production tsup",
     "clean": "rm -rf dist && rm -rf report && rm -rf docs",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
