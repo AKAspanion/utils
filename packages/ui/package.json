@@ -16,7 +16,8 @@
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
-    "test": "jest"
+    "test": "env NODE_ENV=test jest",
+    "report": "env NODE_ENV=test jest --coverage"
   },
   "exports": {
     ".": "./src/index.tsx"
