@@ -17,8 +17,8 @@
     "test": "turbo run test",
     "report": "turbo run report",
     "typecheck": "turbo run typecheck",
-    "prestart": "yarn build:report && yarn build:docs",
-    "prebuild": "yarn build:report && yarn build:docs"
+    "prestart": "yarn build:docs",
+    "prebuild": "yarn build:docs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
