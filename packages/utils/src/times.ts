@@ -14,5 +14,5 @@ export const timesNumber = (length: number): number[] =>
  */
 export const times = <T>(
   length: number,
-  callback: (_: unknown, x: number) => T
+  callback: (_: unknown, x: number) => T,
 ): T[] => Array.from({ length }, callback);

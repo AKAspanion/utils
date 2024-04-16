@@ -8,7 +8,7 @@
 export const promiseRetry = async <T>(
   operation: () => Promise<T> | T,
   delay: number,
-  times: number
+  times: number,
 ): Promise<T> => {
   try {
     return await operation();

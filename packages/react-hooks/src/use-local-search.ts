@@ -11,7 +11,7 @@ import { useMemo, useState } from "react";
  * ```
  */
 const useLocalSearch = <T>(
-  items: T[]
+  items: T[],
 ): {
   results: T[];
   inputValue: string;
@@ -26,7 +26,7 @@ const useLocalSearch = <T>(
   const results = useMemo(() => {
     if (inputValue.length !== 0) {
       return items.filter((item) =>
-        JSON.stringify(item).toLowerCase().includes(inputValue.toLowerCase())
+        JSON.stringify(item).toLowerCase().includes(inputValue.toLowerCase()),
       );
     }
 

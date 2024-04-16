@@ -12,7 +12,7 @@ export const dateBeforeDays = (
   days = 90,
   dateSeparator: SeparatorType = "/",
   dateFormat: DateFormatType = "ymd",
-  time = false
+  time = false,
 ): { to: string; from: string } => {
   const date = new Date();
   let toDate = "";
@@ -41,7 +41,7 @@ export const dateBeforeDays = (
         .toString()
         .padStart(
           2,
-          "0"
+          "0",
         )}${dateSeparator}${date.getDate().toString().padStart(2, "0")}`;
 
       prevDate = new Date(new Date().setDate(date.getDate() - days));
@@ -52,7 +52,7 @@ export const dateBeforeDays = (
         .toString()
         .padStart(
           2,
-          "0"
+          "0",
         )}${dateSeparator}${prevDate.getDate().toString().padStart(2, "0")}`;
     }
 

@@ -1,7 +1,7 @@
 export function throttle<T extends (...args: Parameters<T>) => R, R>(
   callback: T,
   delay = 300,
-  options: ThrottleOptions = {}
+  options: ThrottleOptions = {},
 ): [(...args: Parameters<T>) => R | undefined, () => void] {
   const {
     noTrailing = false,
@@ -61,7 +61,7 @@ export function throttle<T extends (...args: Parameters<T>) => R, R>(
       } else if (!noTrailing) {
         timeout = setTimeout(
           debounceMode ? clear : exec,
-          debounceMode === undefined ? delay - elapsed : delay
+          debounceMode === undefined ? delay - elapsed : delay,
         );
       }
       return val;

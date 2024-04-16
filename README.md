@@ -2,11 +2,11 @@
 
 This is a monorepo library that contains all the reusable utilities, hooks, helpers, etc,. that I have used in my various projects till now.
 
-Packages in this monorepo that are published to npm.  
-- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Fdate-time?style=flat-square&label=%40spanion%2Fdate-time&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Fdate-time)  
-- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Freact-hooks?style=flat-square&label=%40spanion%2Freact-hooks&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Freact-hooks)  
-- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Futils?style=flat-square&label=%40spanion%2Futils&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Futils)  
+Packages in this monorepo that are published to npm.
 
+- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Fdate-time?style=flat-square&label=%40spanion%2Fdate-time&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Fdate-time)
+- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Freact-hooks?style=flat-square&label=%40spanion%2Freact-hooks&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Freact-hooks)
+- ![NPM Version](https://img.shields.io/npm/v/%40spanion%2Futils?style=flat-square&label=%40spanion%2Futils&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40spanion%2Futils)
 
 This repo includes the following packages and apps:
 

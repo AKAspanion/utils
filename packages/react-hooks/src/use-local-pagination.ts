@@ -15,7 +15,7 @@ import { useCallback, useMemo, useState } from "react";
 const useLocalPagination = <T>(
   records: T[],
   count = 5,
-  defaultOffset?: number
+  defaultOffset?: number,
 ): {
   computedRecords: T[];
   showLoadMore: boolean;
@@ -24,17 +24,17 @@ const useLocalPagination = <T>(
 } => {
   const totalRecords = useMemo(() => records.length || 0, [records]);
   const [offset, setOffset] = useState(
-    defaultOffset === undefined ? count : defaultOffset
+    defaultOffset === undefined ? count : defaultOffset,
   );
 
   const showLoadMore = useMemo(
     () => (totalRecords === 0 ? false : offset < totalRecords),
-    [offset, totalRecords]
+    [offset, totalRecords],
   );
 
   const computedRecords = useMemo(
     () => records.slice(0, offset),
-    [offset, records]
+    [offset, records],
   );
 
   const loadMore = useCallback(() => {

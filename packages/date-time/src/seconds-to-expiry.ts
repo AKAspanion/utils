@@ -6,7 +6,7 @@
  */
 export const secondsToExpiry = (
   expiry: number,
-  shouldRound: boolean
+  shouldRound: boolean,
 ): number => {
   const now = new Date().getTime();
   const milliSecondsDistance = expiry - now;

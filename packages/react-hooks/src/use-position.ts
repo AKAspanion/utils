@@ -24,7 +24,7 @@ export type PositionOptions = {
  */
 const usePosition = <T extends HTMLElement = HTMLDivElement>(
   parent: React.RefObject<T>,
-  options?: PositionOptions
+  options?: PositionOptions,
 ): { dimensions: React.CSSProperties; positionElement: () => void } => {
   const [dimensions, setDimensions] = useState<React.CSSProperties>({});
 

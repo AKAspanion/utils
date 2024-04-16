@@ -10,7 +10,7 @@ describe("dateBeforeDays", () => {
         todaysDate.getMonth() + 1
       )
         .toString()
-        .padStart(2, "0")}${dateSeparator}${todaysDate.getFullYear()}`
+        .padStart(2, "0")}${dateSeparator}${todaysDate.getFullYear()}`,
     );
   });
   it("should be able to get getDateBeforeDays with selected date-format with prevDate upto 90 days", () => {
@@ -23,15 +23,15 @@ describe("dateBeforeDays", () => {
         .toString()
         .padStart(
           2,
-          "0"
-        )}${dateSeparator}${todaysDate.getDate().toString().padStart(2, "0")}`
+          "0",
+        )}${dateSeparator}${todaysDate.getDate().toString().padStart(2, "0")}`,
     );
   });
   it("should be able to get getDateBeforeDays with selected date-format when prev date is sent", () => {
     const date = new Date();
     const daysToGetBefore = 30;
     const prevDate = new Date(
-      new Date().setDate(date.getDate() - daysToGetBefore)
+      new Date().setDate(date.getDate() - daysToGetBefore),
     );
 
     const dateSeparator = "/";
@@ -42,7 +42,7 @@ describe("dateBeforeDays", () => {
         prevDate.getMonth() + 1
       )
         .toString()
-        .padStart(2, "0")}${dateSeparator}${prevDate.getFullYear()}`
+        .padStart(2, "0")}${dateSeparator}${prevDate.getFullYear()}`,
     );
   });
 
@@ -59,11 +59,11 @@ describe("dateBeforeDays", () => {
         .toString()
         .padStart(
           2,
-          "0"
+          "0",
         )}T${todaysDate.getHours().toString().padStart(2, "0")}:${todaysDate
         .getMinutes()
         .toString()
-        .padStart(2, "0")}`
+        .padStart(2, "0")}`,
     );
   });
   it("should be able to get empty values as days sent as negative", () => {

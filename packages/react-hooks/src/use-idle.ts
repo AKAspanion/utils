@@ -14,7 +14,7 @@ const oneMinute = 60e3;
 /**
  * Returns a flag when idle for the specified time duration
  * @param ms - time in milliseconds
- * @param initialState - initial state for idle 
+ * @param initialState - initial state for idle
  * @returns the idle state, true/false
  * @example
  * ```ts

@@ -6,7 +6,7 @@
  */
 export const normalize = (
   value?: string | number | object | null,
-  fallback = "-"
+  fallback = "-",
 ): string =>
   value === "" ||
   value === undefined ||

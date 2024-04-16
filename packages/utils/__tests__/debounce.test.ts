@@ -41,7 +41,7 @@ describe("debounce mode from throttle", () => {
         func();
       },
       1000,
-      { debounceMode: true }
+      { debounceMode: true },
     );
     debouncedFunc = df;
   });

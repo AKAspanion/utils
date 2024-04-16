@@ -5,7 +5,7 @@ describe("usePosition", () => {
   it("returns the position and dimensions of the element", () => {
     const parentRef = { current: document.createElement("div") };
     const { result, rerender } = renderHook(() =>
-      usePosition(parentRef, { right: true })
+      usePosition(parentRef, { right: true }),
     );
     expect(result.current.dimensions).toEqual({});
     act(() => {
@@ -15,7 +15,7 @@ describe("usePosition", () => {
     expect(result.current.dimensions.right).toBe("0px");
     expect(result.current.dimensions.width).toBe("0px");
     expect(result.current.dimensions.transform).toBe(
-      "translate3d(0px, 4px, 0px)"
+      "translate3d(0px, 4px, 0px)",
     );
   });
   it("returns the position and dimensions of the element", () => {
@@ -31,7 +31,7 @@ describe("usePosition", () => {
     expect(result.current.dimensions.left).toBe("0px");
     expect(result.current.dimensions.width).toBe("0px");
     expect(result.current.dimensions.transform).toBe(
-      "translate3d(0px, 4px, 0px)"
+      "translate3d(0px, 4px, 0px)",
     );
   });
 });

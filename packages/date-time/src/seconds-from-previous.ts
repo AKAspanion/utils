@@ -6,7 +6,7 @@
  */
 export const secondsFromPrevious = (
   prevTime: number,
-  shouldRound: boolean
+  shouldRound: boolean,
 ): number => {
   const now = new Date().getTime();
   const milliSecondsDistance = now - prevTime;

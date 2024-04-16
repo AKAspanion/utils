@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 
 /**
  * Return a flag indicating first render of component
- * @returns true/false 
+ * @returns true/false
  * @example
  * ```ts
  * const first = useFirstRender();

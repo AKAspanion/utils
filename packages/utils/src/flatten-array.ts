@@ -14,4 +14,4 @@ export const flattenArray = <T>(
       }, [])
     : [arr];
 
-type NestedArray<T> = T | NestedArray<T>[];
+export type NestedArray<T> = T | NestedArray<T>[];

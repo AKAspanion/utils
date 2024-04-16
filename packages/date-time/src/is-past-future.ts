@@ -8,7 +8,7 @@ import type { DateTypes, CompareDateTimeType } from "./types/common";
  */
 export const isPastFuture = (
   value: DateTypes,
-  restrictDateTime: CompareDateTimeType
+  restrictDateTime: CompareDateTimeType,
 ): boolean => {
   const date = new Date(value);
   const selectedValue = date.getTime();

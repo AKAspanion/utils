@@ -5,7 +5,7 @@
 import type { Anything } from "./types/common";
 
 export const promiseAllReduce = (
-  promises: Promise<Anything>[]
+  promises: Promise<Anything>[],
 ): Promise<Anything> => {
   return promises.reduce((accumulator, value) => {
     return accumulator.then((results: Anything) => {
@@ -17,7 +17,7 @@ export const promiseAllReduce = (
 };
 
 export const promiseAllIterative = (
-  promises: Promise<Anything>[]
+  promises: Promise<Anything>[],
 ): Promise<Anything> => {
   return new Promise((resolve, reject) => {
     const results: Anything[] = [];
@@ -42,7 +42,7 @@ export const promiseAllIterative = (
 };
 
 export const promiseAllRecursive = (
-  promises: Promise<Anything>[]
+  promises: Promise<Anything>[],
 ): Anything => {
   if (promises.length === 0) {
     return Promise.resolve([]);
@@ -55,6 +55,6 @@ export const promiseAllRecursive = (
       return promiseAllRecursive(rest).then((restResults: Anything[]) => {
         return [firstResult, ...restResults];
       });
-    }
+    },
   );
 };

@@ -8,7 +8,7 @@ export type KeyboardMetaKeys = "ALT" | "SHIFT" | "CTRL";
  * @param callback - called on key press event
  * @param keys - keyboard keys that activate the callback
  * @param metaKeys - keyboard meta keys to use
- * @param node - element to which the listener is applied 
+ * @param node - element to which the listener is applied
  * @example
  * ```ts
  * // Prints "press" on press of a "a+Ctrl"
@@ -19,7 +19,7 @@ const useKeyPress = (
   callback: (e: KeyboardEvent) => void,
   keys: string[],
   metaKeys: KeyboardMetaKeys[] = [],
-  node: HTMLElement | null = null
+  node: HTMLElement | null = null,
 ): void => {
   const callbackRef = useRef(callback);
 
@@ -46,7 +46,7 @@ const useKeyPress = (
           .filter((s) => !s).length === 0
       );
     },
-    [metaKeys]
+    [metaKeys],
   );
 
   const handleKeyPress = useCallback(
@@ -60,7 +60,7 @@ const useKeyPress = (
         callbackRef.current(event);
       }
     },
-    [isMetaKeysSatisfied, keys]
+    [isMetaKeysSatisfied, keys],
   );
 
   useEffect(() => {

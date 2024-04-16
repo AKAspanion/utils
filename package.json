@@ -1,17 +1,22 @@
 {
   "private": true,
   "scripts": {
+    "dev:app": "cd apps/app && yarn dev",
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
+    "docs": "turbo run docs",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "build:packages": "turbo run build --filter=utils --filter=react-hooks",
     "release:packages": "yarn build:packages && changeset publish",
+    "build:docs": "sh ./scripts/make-doc-folders.sh && yarn docs",
     "lint": "turbo run lint",
     "lint:packages": "turbo run lint --filter=utils --filter=react-hooks",
     "test": "turbo run test",
     "report": "turbo run report",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "prestart": "yarn build:docs",
+    "prebuild": "yarn build:docs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

@@ -5,7 +5,6 @@ export * from "./flatten-array";
 export * from "./in-range";
 export * from "./is-string";
 export * from "./log";
-export * from "./math";
 export * from "./normalize";
 export * from "./pipe";
 export * from "./promise-all-settled";

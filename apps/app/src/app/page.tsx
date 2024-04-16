@@ -3,7 +3,7 @@ import { log } from "@spanion/utils";
 import Launch from "./launch";
 
 export const metadata = {
-  title: "App | Kitchen Sink",
+  title: "Utils | AKAspanion",
 };
 
 export default function App(): JSX.Element {

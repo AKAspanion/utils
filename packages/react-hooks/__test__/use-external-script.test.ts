@@ -4,7 +4,7 @@ import { useExternalScript } from "../src";
 describe("useExternalScript", () => {
   it("return state for a valid external script", () => {
     const { result } = renderHook(() =>
-      useExternalScript("https://code.jquery.com/jquery-3.3.1.slim.min.js")
+      useExternalScript("https://code.jquery.com/jquery-3.3.1.slim.min.js"),
     );
 
     expect(result.current).toBe("loading");

@@ -18,7 +18,7 @@ const useEventListener = <T extends HTMLElement = HTMLDivElement>(
   eventName: keyof WindowEventMap,
   handler: (event: Event) => void,
   options?: boolean | AddEventListenerOptions,
-  element?: RefObject<T>
+  element?: RefObject<T>,
 ): void => {
   const savedHandler = useRef<(event: Event) => void>();
 

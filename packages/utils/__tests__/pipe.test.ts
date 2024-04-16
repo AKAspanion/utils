@@ -7,7 +7,7 @@ describe("pipe", () => {
       (a: string) => Number(a),
       (c: number) => c + 1,
       (d: number) => `${d}`,
-      (e: string) => Number(e)
+      (e: string) => Number(e),
     );
     expect(value).toBe(2);
   });
